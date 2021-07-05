@@ -6,7 +6,7 @@ let basketContainer = document.querySelector("#container");
 //-------------------------- Si le panier est vide-------------------------//
 let total = 0;
 if (basket === null) {
-    basketContainer.innerHTML = `<h3> Le panier est vide </h3>`
+    basketContainer.innerHTML = `<h2> Le panier est vide </h2>`
 } else {
     //---------------------------Si le panier n'est pas vide------------------//
     basket = basket.map((teddy, index) => {
