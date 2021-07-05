@@ -1,0 +1,126 @@
+.orinoco {
+  background-color: rgba(222, 184, 135, 0.623);
+  width: 100%;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 0 6px;
+  margin-left: -6px;
+}
+
+.basket-link a {
+  font-size: 1.1em;
+  font-weight: normal;
+  text-decoration: none;
+  color: black;
+}
+
+#product-description img {
+  width: 350px;
+  height: 300px;
+}
+
+#product-description li {
+  list-style-type: none;
+  margin-top: 20px;
+}
+
+.article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.choice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  margin-top: -40px;
+}
+
+#color-choice {
+  border: none;
+  border-bottom: 2px solid burlywood;
+  width: 95%;
+  height: 30px;
+}
+
+#quantity-input {
+  border: none;
+  border-bottom: 2px solid burlywood;
+  width: 95%;
+  height: 30px;
+}
+
+#add-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  height: 60px;
+  border-radius: 5px;
+  margin-top: 30px;
+  background-color: burlywood;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+footer {
+  background-color: rgba(222, 184, 135, 0.623);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80px;
+  width: 100%;
+  padding: 0;
+}
+
+footer h3 {
+  margin-top: -8px;
+  margin-bottom: 5px;
+}
+
+footer h3 a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.1em;
+}
+/*# sourceMappingURL=product.css.map */
