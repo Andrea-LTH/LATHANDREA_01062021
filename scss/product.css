@@ -92,6 +92,7 @@
   -webkit-box-align: left;
       -ms-flex-align: left;
           align-items: left;
+  width: 80%;
   margin-top: -150px;
   padding: 0;
 }
@@ -153,5 +154,98 @@ footer a {
   color: black;
   margin-top: 0;
   margin-bottom: 20px;
+}
+
+@media all and (min-width: 575.9px) and (max-width: 755.9px) {
+  #product-description p {
+    font-size: 1em;
+  }
+  .choice {
+    margin-top: -80px;
+    padding: 0;
+    width: 80%;
+  }
+  #color-choice {
+    width: 95%;
+    height: 30px;
+  }
+  #quantity-input {
+    width: 95%;
+    height: 30px;
+  }
+  #add-button {
+    font-size: 0.8em;
+  }
+}
+
+@media all and (min-width: 414.9px) and (max-width: 576px) {
+  .article-description h1 {
+    font-size: 1.5em;
+  }
+  #product-description p {
+    font-size: 1em;
+  }
+  #product-description img {
+    width: 250px;
+    height: 170px;
+  }
+  #product-description h3 {
+    font-size: 1em;
+  }
+  .choice {
+    margin-top: -80px;
+    padding: 0;
+    width: 80%;
+  }
+  #color-choice {
+    width: 95%;
+    height: 30px;
+  }
+  #quantity-input {
+    width: 95%;
+    height: 30px;
+  }
+  #add-button {
+    font-size: 0.8em;
+  }
+}
+
+@media all and (min-width: 319.9px) and (max-width: 415px) {
+  .article-description h1 {
+    font-size: 1.2em;
+  }
+  #product-description p {
+    font-size: 0.5em;
+    height: 40px;
+    width: 110px;
+  }
+  #product-description img {
+    width: 200px;
+    height: 130px;
+  }
+  #product-description h3 {
+    font-size: 0.8em;
+  }
+  .choice {
+    margin-top: -30px;
+    padding: 0;
+    width: 90%;
+  }
+  .choice h1, .choice h2 {
+    font-size: 1em;
+  }
+  #color-choice {
+    width: 95%;
+    height: 30px;
+  }
+  #quantity-input {
+    width: 95%;
+    height: 30px;
+  }
+  #add-button {
+    font-size: 0.6em;
+    width: 60%;
+    height: 45px;
+  }
 }
 /*# sourceMappingURL=product.css.map */

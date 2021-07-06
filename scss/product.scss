@@ -56,8 +56,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: left;
+    width: 80%;
     margin-top: -150px;
-    padding: 0;
+    padding: 0;  
   
 }
 #color-choice {
@@ -98,4 +99,107 @@ footer{
         margin-top: 0;
         margin-bottom: 20px;  
     }
+}
+@media all and (min-width:575.9px) and (max-width:755.9px){
+    #product-description p{
+        font-size: 1em;
+    }
+    
+    .choice{
+        margin-top: -80px;
+        padding: 0;
+        width: 80%;
+    }
+    #color-choice {
+        width: 95%;
+        height: 30px;
+    }
+    #quantity-input{
+        width: 95%;
+        height: 30px;
+    }
+    #add-button {
+        font-size: 0.8em;      
+    }
+    
+    
+}
+@media all and (min-width:414.9px) and (max-width:576px){
+    .article-description h1{
+        font-size: 1.5em;
+    }
+    #product-description {
+        p{
+        font-size: 1em;
+        }
+        img{
+            width: 250px;
+            height: 170px;
+        }
+        h3{
+            font-size: 1em;
+        }
+    }
+    
+    .choice{
+        margin-top: -80px;
+        padding: 0;
+        width: 80%;
+    }
+    #color-choice {
+        width: 95%;
+        height: 30px;
+    }
+    #quantity-input{
+        width: 95%;
+        height: 30px;
+    }
+    #add-button {
+        font-size: 0.8em;      
+    }
+    
+    
+}
+@media all and (min-width:319.9px) and (max-width:415px){
+    .article-description h1{
+        font-size: 1.2em;
+    }
+    #product-description {
+        p{
+        font-size: 0.5em;
+        height: 40px;
+        width: 110px;
+        }
+        img{
+            width: 200px;
+            height: 130px;
+        }
+        h3{
+            font-size: 0.8em;
+        }
+    }
+    
+    .choice{
+        margin-top: -30px;
+        padding: 0;
+        width: 90%;
+        h1,h2{
+            font-size: 1em;
+        }
+    }
+    #color-choice {
+        width: 95%;
+        height: 30px;
+    }
+    #quantity-input{
+        width: 95%;
+        height: 30px;
+    }
+    #add-button {
+        font-size: 0.6em;      
+        width: 60%;
+        height: 45px; 
+    }
+    
+    
 }

@@ -1,4 +1,4 @@
-//Déclaration de la variable "basket" avec la key et la value - METHODE GET //
+//Déclaration de la variable "basket" avec la key et la value //
 let basket = JSON.parse(localStorage.getItem("andrea_orinoco"));
 //Format Parse pour convertir les données en format JSON//
 //----------------Endroit où je veux que les éléments du panier apparaissent-----------//
@@ -23,17 +23,26 @@ if (basket === null) {
         li.classList = (".basket-container");
         li.innerHTML =
             `<p>${basket[index].name}</p>
-            <p>"Couleur:${basket[index].color}"</p>
+            <p>"${basket[index].color}"</p>
             <p class="quantity">"Quantité:${quantity}"</p>
             <p class="price">"Prix unitaire:${price} euros"</p>
-            <p class="price">"Sous-total:${subTotal} euros"</p>
-            <button class="delete-article"> Supprimer l'article</button>`;
+            <p class="subTotal">"total:${subTotal} euros"</p>
+            <button class="delete-article"> Supprimer l'article</button>
+            <button class="delete-article-bis"><i class="fas fa-times"></i></button>`;
         basketList.appendChild(li);
         return teddy;
     });
 }
 
 //****************************************FIN*****************************************/
+function displayTotalAmount() {
+    //---------------Code HTML du prix total----------------//
+    const totalPrice = document.querySelector("#total-basket");
+    totalPrice.innerHTML =
+        `<div class="total-basket"> 
+    <h4> Prix total du panier : ${total} euros. </h4></div>`;
+}
+displayTotalAmount()
 
 //--------------Bouton "delete-article"------------//
 let removeArticle = document.getElementsByClassName("delete-article");
@@ -51,17 +60,23 @@ for (let i = 0; i < removeArticle.length; i++) {
         localStorage.setItem("andrea_orinoco", JSON.stringify(basket))
     })
 }
-//************************************************FIN*******************************************************/
-
-
-function displayTotalAmount() {
-    //---------------Code HTML du prix total----------------//
-    const totalPrice = document.querySelector("#total-basket");
-    totalPrice.innerHTML =
-        `<div class="total-basket"> 
-    <h4> Prix total du panier : ${total} euros. </h4></div>`;
+removeArticle = document.getElementsByClassName("delete-article-bis");
+for (let i = 0; i < removeArticle.length; i++) {
+    button = removeArticle[i];
+    button.addEventListener("click", (event) => {
+        event.preventDefault;
+        actualList = Array.prototype.slice.call(document.getElementsByClassName("delete-article-bis"))
+        index = actualList.indexOf(button)
+        subTotal = basket[index].subTotal;
+        total -= subTotal;
+        displayTotalAmount();
+        button.parentElement.remove();
+        basket.splice(index, 1);
+        localStorage.setItem("andrea_orinoco", JSON.stringify(basket))
+    })
 }
-displayTotalAmount()
+
+
 
 //************************************************FIN*******************************************************/
 
@@ -118,7 +133,7 @@ let formContainer = () => {
 </div>
 <div class="form-group">
     <button class="submit-button" type="submit name="submit-button">
-        Confirmer ma commande
+        <p>Confirmer ma commande</p>
     </button>
 </div>`
 }
@@ -135,6 +150,25 @@ submitFormButton.addEventListener("click", (e) => {
         address: document.querySelector("#address").value,
         city: document.querySelector("#city").value,
 
+    }
+    //*************************Gestion de la validation du formulaire**************************//
+    const email = submitForm.email;
+    if (/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) {
+    } else {
+        location.href = "panier.html"
+        alert("L'email n'est pas valide");
+    }
+    const lastname = submitForm.lastName;
+    if(/^[A-Za-z]{2,20}$/.test(lastname)){
+    }else{
+        location.href = "panier.html"
+        alert("Les chiffres ne sont pas autorisés");
+    }       
+    const firstname = submitForm.firstName;
+    if(/^[A-Za-z]{2,20}$/.test(firstname)){
+    }else{
+        location.href = "panier.html"
+        alert("Les chiffres ne sont pas autorisés");
     }
     if (submitForm.lastName.trim().length === 0) {
         alert("Tous les champs doivent être remplis")
@@ -157,19 +191,13 @@ submitFormButton.addEventListener("click", (e) => {
         return
     }
     localStorage.setItem("submitForm", JSON.stringify(submitForm));
-    //*************************Gestion de la validation du formulaire**************************//
 
-    const email = submitForm.email;
-    if (/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) {
-    } else {
-        alert("L'email n'est pas valide");
-    }
 
     //*************Récupérer les élements du panier et du formulaire à envoyer au server***********************//
     const sendElement = {
         products: basket.map(product => product._id),
         contact: submitForm,
-        total:basket.map(product => product.price),
+        total: basket.map(product => product.subTotal),
     };
     //*******************Envoie vers le serveur********************************************************//
 
@@ -185,8 +213,8 @@ submitFormButton.addEventListener("click", (e) => {
         try {
             const order = await response.json();
             if (response.ok) {
-                localStorage.setItem("order",order.orderId)
-                location.href="page-confirmation.html";
+                localStorage.setItem("order", order.orderId)
+                location.href = "page-confirmation.html";
             } else {
                 console.log(`Reponse du serveur : ${response.status}`)
             };

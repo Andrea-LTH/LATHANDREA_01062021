@@ -1,5 +1,7 @@
+//*********Initialisation de la variable avec définition du querySelector pour l'UL**************//
 let $productsList= document.querySelector("#products-list")
 
+//******************Récupération des éléments présents dans l'API via l'URL*************//
 fetch("http://localhost:3000/api/teddies")
 .then((response) => {
     if (response.ok) {

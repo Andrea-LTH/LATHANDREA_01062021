@@ -40,8 +40,19 @@
         border: 2px solid black;
         margin-top: 60px; 
         margin-bottom: -75px;
-        width: 60%;
+        width: 90%;
     }
+}
+.delete-localStorage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(245, 236, 236); ;
+    border: none;
+    width: 140px;
+    height: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 footer{
     display: flex;
@@ -57,4 +68,11 @@ footer{
         margin-top: 0;
         margin-bottom: 20px;  
     }
+}
+
+@media all  and (min-width:319.9px) and (max-width:395px){
+    #information h1{
+        font-size: 1.2em;
+    }
+
 }

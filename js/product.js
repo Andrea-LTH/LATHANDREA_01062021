@@ -6,7 +6,7 @@ let $productDescription = document.querySelector("#product-description")
 
 fetch(`http://localhost:3000/api/teddies/${teddyID}`)
     .then((response) => {
-        if (response.ok) {
+        if (response.ok) {            
             response.json().then((descriptions) => {
                 let $li = document.createElement("li")
                 $li.innerHTML = `
@@ -28,6 +28,7 @@ fetch(`http://localhost:3000/api/teddies/${teddyID}`)
                             _id: descriptions._id,
                             name: descriptions.name,
                             price: descriptions.price / 100,
+                            subTotal: descriptions.price/100 * $quantityInput.value,
                             color: $colorChoice.value,
                             quantity: document.getElementById("quantity-input").value,
                         };                     

@@ -75,7 +75,25 @@
   border: 2px solid black;
   margin-top: 60px;
   margin-bottom: -75px;
-  width: 60%;
+  width: 90%;
+}
+
+.delete-localStorage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f5ecec;
+  border: none;
+  width: 140px;
+  height: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 footer {
@@ -102,5 +120,11 @@ footer a {
   color: black;
   margin-top: 0;
   margin-bottom: 20px;
+}
+
+@media all and (min-width: 319.9px) and (max-width: 395px) {
+  #information h1 {
+    font-size: 1.2em;
+  }
 }
 /*# sourceMappingURL=page-confirmation.css.map */

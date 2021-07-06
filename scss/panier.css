@@ -94,6 +94,10 @@
   padding: 0;
 }
 
+#delete-basket p {
+  font-size: 1.5em;
+}
+
 #delete-basket button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -104,8 +108,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 130px;
-  height: 35px;
+  width: 185px;
+  height: 45px;
   background-color: #f5ecec;
   border: none;
   font-weight: bold;
@@ -126,6 +130,10 @@
   width: 140px;
   height: 40px;
   font-weight: bold;
+}
+
+.delete-article-bis {
+  display: none;
 }
 
 .form-group {
@@ -152,7 +160,7 @@
 
 .form-group input {
   height: 40px;
-  width: 40%;
+  width: 80%;
   margin-top: 8px;
   border: 5px solid #f5ecec;
   -webkit-transform: scale(1);
@@ -175,10 +183,39 @@
       -ms-flex-align: center;
           align-items: center;
   font-weight: bold;
-  height: 35px;
-  width: 210px;
+  height: 40px;
+  width: 310px;
   margin-top: 8px;
   background-color: #f5ecec;
   border: none;
+}
+
+.submit-button p {
+  font-size: 1.5em;
+}
+
+@media all and (min-width: 320px) and (max-width: 765px) {
+  .quantity, .price {
+    display: none;
+  }
+  .delete-article {
+    display: none;
+  }
+  .delete-article-bis {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #f5ecec;
+    border: none;
+    width: 30px;
+    height: 30px;
+    font-weight: bold;
+  }
 }
 /*# sourceMappingURL=panier.css.map */
