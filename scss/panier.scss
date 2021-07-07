@@ -2,7 +2,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;  
-    img{
+    img
+    {
         height: 50px;
         width: 180px;
     }
@@ -33,7 +34,8 @@
     margin: 0;
     padding: 0;
     width: 100%;
-    li{
+    li
+    {
         display: flex;
         justify-content:space-between;
         align-items: center;
@@ -53,10 +55,12 @@
 #delete-basket{
     margin-top: 8px;
     padding: 0;
-    p{
+    p
+    {
         font-size: 1.5em;
     }
-    button{
+    button
+    {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -86,18 +90,21 @@
     flex-direction: column;  
     justify-content: center;  
     align-items: center;
-    label{
+    label
+    {
         font-size: 1.2em;
         font-weight: bold;
         margin-top: 8px;
     }
-    input{
+    input
+    {
         height: 40px;
         width: 80%;
         margin-top: 8px;
         border:5px solid rgb(245, 236, 236);
         transform: scale(1);
-        &:focus{
+        &:focus
+        {
             transform: scale(1.1);
         }
     }
@@ -112,7 +119,8 @@
     margin-top: 8px;
     background-color:rgb(245, 236, 236);
     border: none;
-    p{
+    p
+    {
         font-size: 1.5em;
     }
 }
