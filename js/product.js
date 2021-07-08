@@ -32,14 +32,14 @@ fetch(`http://localhost:3000/api/teddies/${teddyID}`)
                             color: $colorChoice.value,
                             quantity: document.getElementById("quantity-input").value,
                         };                     
-                        // Définition de mon localStorage //
+                         // Définition de mon localStorage //
                         let myBasket = localStorage.getItem("andrea_orinoco")
                         //Si mon panier n'est pas définit - Panier vide-LocalStorage -initier le tableau vide//
                         if (!myBasket) {
                             myBasket = [];
                             // Sinon ajout des produits dans le panier - localSTorage //                 
-                        } else {
-                            myBasket = JSON.parse(myBasket);
+                        } else{
+                            myBasket = JSON.parse(myBasket);                         
                         }
                         // Ajout d'un objet au panier - stringifier pour récupérer tous les éléments de l'objet"//      
                         myBasket.push(objectItem);                   
@@ -53,14 +53,3 @@ fetch(`http://localhost:3000/api/teddies/${teddyID}`)
         }
 
     })
-
-
-
-
-
-
-
-
-
-
-

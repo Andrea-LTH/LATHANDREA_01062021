@@ -197,7 +197,6 @@ submitFormButton.addEventListener("click", (e) => {
     const sendElement = {
         products: basket.map(product => product._id),
         contact: submitForm,
-        total: basket.map(product => product.subTotal),
     };
     //*******************Envoie vers le serveur********************************************************//
 

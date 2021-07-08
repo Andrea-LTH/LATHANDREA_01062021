@@ -28,15 +28,18 @@
     align-items: center;
 }
 #product-description {
-    img{
+    img
+    {
         width:350px;
         height: 300px; 
     } 
-    li {
+    li 
+    {
         list-style-type: none;
         margin-top: 20px;        
-        }
-    p{
+    }
+    p
+    {
         font-size: 1.5em;
         font-weight: bold;
         background-color:rgb(245, 236, 236);
